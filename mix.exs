@@ -14,7 +14,10 @@ defmodule ElixirCowboy.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger, :cowboy]]
+    [
+      mod: {WebServer, []},
+      applications: [:logger, :cowboy],
+    ]
   end
 
   # Dependencies can be Hex packages:
